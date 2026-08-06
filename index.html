@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Personal Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Linked CSS Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="./scripts.js"></script>
+
+    <link href="./resources/images/Font-awesome/css/brands.min.css" rel="stylesheet">
+    <link href="./resources/images/Font-awesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="./resources/images/Font-awesome/css/solid.min.css" rel="stylesheet">
+    <link href="./resources/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+</head>
+  <!--HEADER-->
+  <body>
+  <header class="home-container-outer" id="home">
+    <div class="wrapper">
+        <nav>
+            <input type="checkbox" id="hamburger" name="hamburger">
+            <label for="hamburger" aria-label="toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul>
+                <li><a href="#home" aria-label="go to home section.">Home
+                </a></li>
+                <li><a href="#about" aria-label="go to about section.">About
+                </a></li>
+                <li><a href="#tools-and-skills" aria-label="go to skills and tools section.">Tools and Skills
+                </a></li>
+                <li><a href="#work" aria-label="go to projects section.">Projects
+                </a></li>
+                <li><a href="#contact" aria-label="go to contact section.">Contact
+                </a></li>
+            </ul>
+        </nav>
+    <section class="home" id="home">
+        <div class="container-home">
+            <div class="container-text">
+                <h1>Hi, my name is <span>Glenn.</span></h1>
+                <h3>I'm an aspiring front-end web developer, from just north of <span>London</span> in the UK.</h3>
+            </div> 
+            <div class="home-column">
+            <h3>Need to know more?</h3>
+            <a class="btn" href="./resources/documents/CV_2026_Universal.doc" download>Download CV</a>
+            <h3>Location:</h3>
+                <div id="map" style="width: 22rem"></div>
+                <script>
+                    var map = L.map('map').setView([51.919,-0.681], 7);
+
+                    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 11,
+                    minZoom: 4,
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    }).addTo(map);
+
+                    var marker = L.marker([51.9197,-0.682]).addTo(map);
+                </script>
+            </div>
+ 
+        </div>     
+    </section>
+  </header>
+  
+      <!--ABOUT-->
+  <main>
+  <section class="about" id="about">
+    <div class="wrapper">
+        <h2>About</h2>
+        <h3>Who am I?</h3>
+            <div class="container-content">
+                <div class="container-img-profile"><img src="./resources/images/Portfolio-picture.jpg"></div>
+                    <div class="container-text">    
+                    <p>I am a self-taught front-end web developer, with a passion for creating aesthetically pleasing and functional websites. <br>I build modern, responsive interfaces using HTML, CSS and 
+                    Javascript, focusing on clean layouts, smooth interactions and 
+                    thoughful details that make products feel intuitive and
+                    enjoyable to use. I am always eager to learn new technologies and stay up-to-date with the latest trends in web development.</div>
+                    </p>
+                    </div>
+            </div>
+    </div>
+    </section>
+
+    <!--SKILLS AND TOOLS-->
+  <section class="skills-tools" id="tools-and-skills">
+    <div class="wrapper">
+        <h2 class="light">Skills and tools</h2>
+        <h3>What I use to build</h3>
+        <p>The skills, tools and technologies I use, to bring your products to life.</p>
+        <div class="container-icons">
+            <div class="box-icon">
+                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                <p>HTML5</p>
+            </div>
+            <div class="box-icon">
+                <i class="fa-brands fa-css3"></i>
+                <p>CSS3</p>
+            </div>
+            <div class="box-icon">
+                <i class="fa-brands fa-js" aria-hidden="true"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="box-icon">
+                <i class="fa-brands fa-react" aria-hidden="true"></i>
+                <p>React</p>
+            </div>
+            <div class="box-icon">
+                <i class="fa-brands fa-git" aria-hidden="true"></i>
+                <p>Git</p>
+            </div>
+            <div class="box-icon">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                <p>GitHub</p>
+            </div>
+            <div class="box-icon">
+                <i class="devicon devicon-vercel-plain" aria-hidden="true"></i>
+                <p>Vercel</p>
+            </div>
+            <div class="box-icon">
+                <i class="devicon devicon-vitejs-plain" aria-hidden="true"></i>
+                <p>Vite</p>
+            </div>
+            <div class="box-icon">
+                <i class="devicon devicon-nodejs-plain" aria-hidden="true"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="box-icon">
+                <i class="devicon devicon-figma-plain" aria-hidden="true"></i>
+                <p>Figma</p>
+            </div>
+            <div class="box-icon">
+                <img src="./resources/images/cogs.png" aria-hidden="true">
+                <p>RESTful APIs</p>
+            </div>
+            <div class="box-icon">    
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-plain.svg" aria-hidden="true" />
+                <p>VS Code</p>
+            </div>
+            <div class="box-icon">
+                <img src="./resources/images/responsive-alt-resize.png" aria-hidden="true">
+                <p class="adjust">Responsive Websites</p>
+            </div>
+            <div class="box-icon-adjust">
+                <i class="fa-brands fa-w3c" aria-hidden="true"></i>
+                <p class="p-adjust">Web Accessibility</p>
+            </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!--PROJECTS-->
+  <section class="work" id="work">
+    <div class="wrapper">
+        <h2 class="light">Projects</h2>
+        <h3><strong>What I've built</strong></h3>
+
+        <div class="container-work">
+            <div class="container-img__golf-sweepstake">
+                <img src="./resources/images/ChatGPT Image Jun 2, 2026, 09_26_52 PM.png">
+            </div>
+            <div class="container-text">
+                <h4>Golf sweepstake tracker</h4>
+                <p>An app for those who want to add real stakes to golf's major tournaments.<br>
+                Our handy app will provide an easy and accessible way for users to generate, 
+                track and view each of their assigned golfers, from the first round tee-off to championship winning putt.    
+                </p>
+                <div class="container-icons-mini">
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-react-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon fab fa-js" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-css3-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon fab fa-git" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon fab fa-github" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-figma-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-vscode-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-vercel-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-vitejs-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-nodejs-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon fas fa-cogs" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon fab fa-w3c" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <img src="./resources/images/responsive-alt-resize.png" aria-hidden="true">
+                    </div>
+                </div>
+                <div class="container-work-btns">
+                    <a href="https://golf-sweepstake-app.vercel.app/" target="_blank" aria-label="open link to a ___ website." class="btn btn-work">View project</a>
+                    <a href="https://github.com/Acemeistre/Portfolio-Project_Golf-sweepstake-app" target="_blank" aria-label="open link to a golf sweepstake GitHub repository." class="btn btn-work">View on GitHub</a>   
+                </div>
+            </div>
+        </div>
+
+        <div class="container-work">
+            <div class="container-img__vaulted-games">
+                <img src="./resources/images/Vaulted games_screenshot.jpg">
+            </div>
+            <div class="container-text">
+                <h4>Games history Organizer</h4>
+                <p>View, find and sort through your video games, to keep tabs on all aspects of your gaming library.
+                Gamers can pour through their gaming history, using a selection of filters to analyze, track and find every title they've ever enjoyed.    
+                </p>
+                <div class="container-icons-mini">
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-react-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon fab fa-js" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-css3-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon fab fa-git" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon fab fa-github" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-figma-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-vscode-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-vercel-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon devicon devicon-vitejs-plain" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="box-icon fab fa-w3c" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <img src="./resources/images/responsive-alt-resize.png" aria-hidden="true">
+                    </div>
+                </div>
+                <div class="container-work-btns">
+                    <a href="https://vaulted-games.vercel.app/" target="_blank" aria-label="open link to a ___ website." class="btn btn-work">View project</a>
+                    <a href="https://github.com/Acemeistre/vaulted-games" target="_blank" aria-label="open link to a ___ GitHub repository." class="btn btn-work">View on GitHub</a>   
+                </div>
+            </div>
+        </div>
+
+        <div class="container-work">
+            <div class="container-img">
+                <img src="./resources/images/project screenshot-image.jpg">
+            </div>
+            <div class="container-text">
+                <h4>The Great Transition - COMING SOON</h4>
+                <p>A resource for key information on our transition from using fossil fuels to an all new electro-state. <br>
+                This app shows the 5 keys that will be transforming our lives, greatly reducing our effect on 
+                emissions, including sectors such as; transport, energy, heating and more.    
+                </p>
+                <div class="container-icons-mini">
+                    <div class="box-icon">
+                        <i class="" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="" aria-hidden="true"></i>
+                    </div>
+                    <div class="box-icon">
+                        <i class="" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="container-work-btns">
+                    <a href="" target="_blank" aria-label="open link to a ___ website." class="btn btn-work">View project</a>
+                    <a href="" target="_blank" aria-label="open link to a ___ GitHub repository." class="btn btn-work">View on GitHub</a>   
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--CONTACT-->
+<section class="contact" id="contact">
+    <div class="wrapper">
+        <h2>Contact</h2>
+        <h3>Get in touch</h3>
+        <div class="container-content">
+            <div class="container-form" >
+            <p>Looking to say hi, or perhaps thinking of working together to build something more? I'd love to hear from you!</p>
+            <p>Fill in the fields below and we can talk about new opportunities!</p>
+                <form action="https://glenn.niblett@hotmail.co.uk" method="POST">
+                    <div class="field">
+                        <input type="text" name="name" id="name" required="required" placeholder="Name">
+                        <label for="name">Name
+                            <span class="required">*</span>
+                        </label>
+                    </div>
+                    <div class="field">
+                        <input type="email" name="email" id="email" required="required" placeholder="Email">
+                        <label for="email">Email
+                            <span class="required">*</span>
+                        </label>
+                    </div>
+                    <div class="field">
+                        <textarea name="message" id="message" required="required" placeholder="Message"></textarea>
+                        <label for="message">Message
+                            <span class="required">*</span>
+                        </label>
+                    </div>
+                    <button class="btn" value="send"><span>Send email</span></button>    
+                </form>
+                </div>
+                <div class="container-social">
+                    <p>Alternatively, you can find me on:</p>
+                    <div class="container-social-i">
+                        <ul>
+                            <li>
+                                <a href="https://www.linkedin.com/in/glenn-niblett-618180112/" target="_blank" aria-label="Visit my LinkedIn profile">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Acemeistre" target="_blank" aria-label="Visit my GitHub profile">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/7790351569" target="_blank" aria-label="Visit my LinkedIn profile">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.com/invite/acemeistre" target="_blank" aria-label="Visit my Discord server">
+                                    <i class="fab fa-discord" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+<!--FOOTER-->
+<footer>
+    <div class="wrapper"><p> <span>&#169<span> 2026 | Designed and coded by Glenn Niblett (aka Acemeistre)</p></div>
+    </div>
+</footer>
+</body>
+</main>
